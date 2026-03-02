@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wardrobe Hub | Premium Fashion Brands</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body id="home">
+    <header id="main-header">
+        <div class="container nav-content">
+            <nav>
+                <div class="logo">Wrdrobe<span style="color: var(--accent-gold);">.</span></div>
+                <ul class="nav-links mobile-hide">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#brands">Brands</a></li>
+                    <li><a href="#trending">Trending</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#" id="sell-btn" class="accent-link">Partner With Us</a></li>
+                </ul>
+                <div class="header-icons">
+                    <div class="theme-switch" onclick="toggleTheme()" style="cursor: pointer;">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </div>
+                    <div class="search-bar mobile-hide">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search brands, styles...">
+                    </div>
+                    <i data-lucide="heart" style="cursor: pointer; position: relative;" onclick="showWishlistAlert()">
+                        <span id="wishlist-count" class="badge">0</span>
+                    </i>
+                    <i data-lucide="shopping-bag" id="cart-btn-icon" style="cursor: pointer; position: relative;">
+                        <span id="cart-count" class="badge">0</span>
+                    </i>
+                    <i data-lucide="user" style="cursor: pointer;"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="bg-glow"></div>
+        <section id="hero" class="container">
+            <div class="hero-content animate-up">
+                <span class="hero-subtitle">Evolution of Luxury</span>
+                <h1 id="hero-title">Elevate Your<br><span class="accent">Style Quotient</span></h1>
+                <p>Discover curated collections from the world's most prestigious clothing brands, delivered with an
+                    elite experience.</p>
+                <div class="cta-group">
+                    <button class="btn btn-primary">Shop Collection</button>
+                    <button class="btn btn-secondary">The Brands</button>
+                </div>
+            </div>
+            <div class="hero-visual animate-up">
+                <img src="assets/hero-model.png" alt="Luxury Fashion">
+            </div>
+        </section>
+
+        <section id="brands" class="brands-marquee">
+            <div class="marquee-content">
+                <span class="brand-name">Gucci</span>
+                <span class="brand-name">Prada</span>
+                <span class="brand-name">Chanel</span>
+                <span class="brand-name">Louis Vuitton</span>
+                <span class="brand-name">Versace</span>
+                <span class="brand-name">Armani</span>
+                <span class="brand-name">Dior</span>
+                <span class="brand-name">Balenciaga</span>
+                <span class="brand-name">Burberry</span>
+                <span class="brand-name">Fendi</span>
+                <span class="brand-name">Hermès</span>
+                <span class="brand-name">Saint Laurent</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="brand-name">Gucci</span>
+                <span class="brand-name">Prada</span>
+                <span class="brand-name">Chanel</span>
+                <span class="brand-name">Louis Vuitton</span>
+                <span class="brand-name">Versace</span>
+                <span class="brand-name">Armani</span>
+                <span class="brand-name">Dior</span>
+                <span class="brand-name">Balenciaga</span>
+                <span class="brand-name">Burberry</span>
+                <span class="brand-name">Fendi</span>
+                <span class="brand-name">Hermès</span>
+                <span class="brand-name">Saint Laurent</span>
+            </div>
+        </section>
+
+        <section id="trending" class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <div class="product-brand">Curated Selection</div>
+                    <h2>Trending Now</h2>
+                </div>
+            </div>
+            <div id="product-grid" class="product-grid"></div>
+        </section>
+
+        <section id="categories" class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2>Explore Collections</h2>
+            </div>
+            <div class="category-grid">
+                <div class="category-card cat-men animate-up">
+                    <img src="assets/men-category.png" alt="Men's Collection">
+                    <div class="category-overlay">
+                        <h3>Men</h3>
+                        <p>Refined Tailoring</p>
+                    </div>
+                </div>
+                <div class="category-card cat-women animate-up">
+                    <img src="assets/women-category.png" alt="Women's Collection">
+                    <div class="category-overlay">
+                        <h3>Women</h3>
+                        <p>Elegant Essentials</p>
+                    </div>
+                </div>
+                <div class="category-card cat-acc animate-up">
+                    <img src="assets/accessories-category.png" alt="Accessories">
+                    <div class="category-overlay">
+                        <h3>Accessories</h3>
+                        <p>Luxury Details</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="container">
+            <div class="service-grid">
+                <div class="service-item">
+                    <i data-lucide="truck"></i>
+                    <h4>Free Shipping</h4>
+                    <p>On all orders above $500</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="shield-check"></i>
+                    <h4>Secure Payment</h4>
+                    <p>100% secure payment processing</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="refresh-cw"></i>
+                    <h4>Easy Returns</h4>
+                    <p>30-day hassle-free return policy</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="headset"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated luxury concierge</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="container">
+            <div class="newsletter-content">
+                <h2>Join the Hub</h2>
+                <p>Subscribe to receive updates on new collections and exclusive offers.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo" style="margin-bottom: 1.5rem;">Wardrobe Hub</div>
+                    <p>Redefining luxury fashion through a curated digital experience. Home to the world's most
+                        prestigious brands.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Men's Collection</a></li>
+                        <li><a href="#">Women's Collection</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Wardrobe Hub. All Rights Reserved. Crafted for Elegance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <i data-lucide="x" id="close-cart" style="cursor: pointer;"></i>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p style="color: var(--text-muted); text-align: center; margin-top: 2rem;">Your bag is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total"
+                style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: 600;">
+                <span>Total</span>
+                <span id="cart-total-amount">$0</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;" onclick="processCheckout()">Checkout Now</button>
+        </div>
+    </div>
+    <div id="cart-overlay"></div>
+
+    <!-- Seller Registration Modal -->
+    <div id="seller-modal" class="modal">
+        <div class="modal-content glass">
+            <div class="modal-header">
+                <h2>Join Wardrobe Hub</h2>
+                <i data-lucide="x" id="close-seller-modal" style="cursor: pointer;"></i>
+            </div>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Showcase your elite brand to the world's most
+                sophisticated audience.</p>
+            <form id="seller-form" class="seller-form">
+                <input type="text" placeholder="Brand Name" required>
+                <input type="email" placeholder="Business Email" required>
+                <select required>
+                    <option value="" disabled selected>Category</option>
+                    <option value="men">Men's Fashion</option>
+                    <option value="women">Women's Fashion</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+                <textarea placeholder="Tell us about your brand..." rows="4"></textarea>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Placed Popup -->
+    <div id="order-popup" class="popup-overlay">
+        <div class="popup-content animate-up">
+            <i data-lucide="check-circle"
+                style="color: var(--accent-gold); width: 60px; height: 60px; margin-bottom: 1rem;"></i>
+            <h2>Order Placed!</h2>
+            <p>Thank you for shopping with Wardrobe Hub. Your luxury pieces are being prepared.</p>
+            <button class="btn btn-primary" onclick="closePopup()" style="margin-top: 1.5rem; width: 100%;">Continue
+                Shopping</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
